@@ -11,7 +11,7 @@ const BookingsModal = ({ showBookingsModal, setShowBookingsModal, setError }) =>
   const [checkInFilter, setCheckInFilter] = useState("all");
   const [loading, setLoading] = useState(false);
   const [hotelNames, setHotelNames] = useState({});
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
   const [isDarkMode] = useDarkMode();  
 
   const fetchUserBookings = async () => {

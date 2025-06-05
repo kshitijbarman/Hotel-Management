@@ -13,7 +13,7 @@ const AdminPanel = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
 
   //----------------------------------- Fetch all bookings -----------------------------------
   const fetchBookings = async () => {

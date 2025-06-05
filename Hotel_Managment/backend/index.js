@@ -17,11 +17,12 @@ require("dotenv").config();
 const cron = require("node-cron");
 const { startCronJobs } = require("./Crons/DeactivateUserCron");
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(fileUpload());
-
 
 // MongoDB Connection
 const connectDB = async () => {
@@ -63,7 +64,6 @@ app.use("/api", analyticsRoutes);
 // scheduleReportCronJob();
 
 // const PORT = 6969 ;
-const PORT = process.env.PORT;
 const startServer = async () => {
   await connectDB();
   app.listen(PORT, () => {

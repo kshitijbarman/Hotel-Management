@@ -8,7 +8,7 @@ const Otp = () => {
 
   const [email, setEmail] = useState("");
 
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
 
 
   useEffect(() => {

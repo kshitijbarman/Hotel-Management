@@ -15,7 +15,7 @@ const ResetPasswordUser = () => {
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

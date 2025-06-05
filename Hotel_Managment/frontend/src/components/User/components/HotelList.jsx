@@ -40,7 +40,7 @@ const HotelList = ({
   const [currentImageIndex, setCurrentImageIndex] = useState({});
   const [roomLoading, setRoomLoading] = useState(false);
   const [previewImages, setPreviewImages] = useState({});
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
   const scrollPositionRef = useRef(0);
 
   // Filter and sort hotels
