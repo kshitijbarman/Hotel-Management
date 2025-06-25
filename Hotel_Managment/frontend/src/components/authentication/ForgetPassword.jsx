@@ -15,7 +15,7 @@ const ForgetPassword = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-rgpk.onrender.com";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

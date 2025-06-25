@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
 
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-rgpk.onrender.com";
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({

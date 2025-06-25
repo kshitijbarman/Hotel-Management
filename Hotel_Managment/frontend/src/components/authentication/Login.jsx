@@ -9,7 +9,7 @@ const LogIn = () => {
     password: "",
   });
 
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-rgpk.onrender.com";
 
 
   const handleChange = (e) => {

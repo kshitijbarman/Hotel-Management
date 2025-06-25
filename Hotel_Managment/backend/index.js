@@ -12,6 +12,7 @@ const couponRoutes = require("./routes/CouponRoute");
 const analyticsRoutes = require("./routes/DshboardRoute");
 const locationroute = require("./routes/LocationRoute");
 const fileUpload = require("express-fileupload");
+require("dotenv").config();
 
 const cron = require("node-cron");
 const { startCronJobs } = require("./Crons/DeactivateUserCron");
@@ -24,7 +25,11 @@ app.use(fileUpload());
 // MongoDB Connection
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/location-manager");
+    // await mongoose.connect(
+    //   "mongodb+srv://kshitijbarman1234:kshitij123@cluster0.rfhd7.mongodb.net/hotel_management"
+    // );
+    await mongoose.connect(process.env.mongoUrl);
+
     console.log("MongoDB connected successfully");
   } catch (error) {
     console.error("MongoDB connection error:", error);

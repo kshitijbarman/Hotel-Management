@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const SignUp = () => {
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-rgpk.onrender.com";
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -110,7 +110,6 @@ const SignUp = () => {
   const handleNavigate = () => {
     navigate("/");
   };
-
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-10">
