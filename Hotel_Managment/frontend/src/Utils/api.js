@@ -1,7 +1,7 @@
-// src/utils/api.js
+
 import axios from 'axios';
 
-const API_URL = 'https://hotel-management-backend-zitt.onrender.com/';
+const API_URL = 'http://localhost:6969/';
 
 const api = axios.create({
     baseURL: API_URL,

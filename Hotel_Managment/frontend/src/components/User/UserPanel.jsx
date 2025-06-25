@@ -24,7 +24,7 @@ const UserPanel = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [isDarkMode] = useDarkMode();
-  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
+  const baseURL = "http://localhost:6969";
 
   const getUserId = () => {
     const token = localStorage.getItem("token");

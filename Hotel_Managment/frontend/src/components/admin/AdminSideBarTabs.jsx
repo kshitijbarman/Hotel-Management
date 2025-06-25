@@ -34,7 +34,7 @@ const ADLocation = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
+  const baseURL = "http://localhost:6969";
 
   const fetchStates = async () => {
     try {

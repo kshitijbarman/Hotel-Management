@@ -15,7 +15,7 @@ const ForgetPassword = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
+  const baseURL = "http://localhost:6969";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

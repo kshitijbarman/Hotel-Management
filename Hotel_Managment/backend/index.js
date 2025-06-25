@@ -12,12 +12,9 @@ const couponRoutes = require("./routes/CouponRoute");
 const analyticsRoutes = require("./routes/DshboardRoute");
 const locationroute = require("./routes/LocationRoute");
 const fileUpload = require("express-fileupload");
-require("dotenv").config();
 
 const cron = require("node-cron");
 const { startCronJobs } = require("./Crons/DeactivateUserCron");
-
-const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(cors());
@@ -27,8 +24,7 @@ app.use(fileUpload());
 // MongoDB Connection
 const connectDB = async () => {
   try {
-    // await mongoose.connect("mongodb://localhost:27017/location-manager");
-    await mongoose.connect(process.env.mongoUrl);
+    await mongoose.connect("mongodb://localhost:27017/location-manager");
     console.log("MongoDB connected successfully");
   } catch (error) {
     console.error("MongoDB connection error:", error);
@@ -63,7 +59,7 @@ app.use("/api", analyticsRoutes);
 
 // scheduleReportCronJob();
 
-// const PORT = 6969 ;
+const PORT = 6969;
 const startServer = async () => {
   await connectDB();
   app.listen(PORT, () => {

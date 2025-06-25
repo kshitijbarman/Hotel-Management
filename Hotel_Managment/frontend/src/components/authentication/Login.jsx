@@ -9,7 +9,7 @@ const LogIn = () => {
     password: "",
   });
 
-  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
+  const baseURL = "http://localhost:6969";
 
 
   const handleChange = (e) => {

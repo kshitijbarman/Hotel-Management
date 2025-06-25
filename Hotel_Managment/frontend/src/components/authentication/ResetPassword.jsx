@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
 
-  const baseURL = "https://hotel-management-backend-zitt.onrender.com";
+  const baseURL = "http://localhost:6969";
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({

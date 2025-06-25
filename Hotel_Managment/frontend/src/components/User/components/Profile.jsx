@@ -27,7 +27,7 @@ const Profile = () => {
   const [loading, setLoading] = useState(false);
   const [isDarkMode, toggleMode] = useDarkMode();
 
-  const baseURL = 'https://hotel-management-backend-zitt.onrender.com';
+  const baseURL = 'http://localhost:6969';
 
   // Predefined list of background images--------------------------------------------------
   const backgroundImages = [

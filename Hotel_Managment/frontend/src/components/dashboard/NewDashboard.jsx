@@ -10,7 +10,7 @@ import useDarkMode from '../User/hooks/useDarkMode';
 
 ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend, LineElement, PointElement, ChartDataLabels);
 
-const API_URL = 'https://hotel-management-backend-zitt.onrender.com/';
+const API_URL = 'http://localhost:6969/';
 const api = axios.create({
     baseURL: API_URL,
     headers: {

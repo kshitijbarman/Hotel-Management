@@ -62,7 +62,7 @@ const ALocation = () => {
     const [isHotelExpanded, setIsHotelExpanded] = useState(false);
     const [expandedHotels, setExpandedHotels] = useState({});
 
-    const baseURL = "https://hotel-management-backend-zitt.onrender.com";
+    const baseURL = "http://localhost:6969";
 
     // -----------------------------------Fetch data-----------------------------------
     const fetchStates = async () => {
