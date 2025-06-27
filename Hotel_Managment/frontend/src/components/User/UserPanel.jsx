@@ -24,7 +24,7 @@ const UserPanel = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [isDarkMode] = useDarkMode();
-  const baseURL = "http://localhost:6969";
+  const baseURL = "https://hotel-management-backend-rgpk.onrender.com";
 
   const getUserId = () => {
     const token = localStorage.getItem("token");
@@ -173,9 +173,7 @@ const UserPanel = () => {
   return (
     <div
       className={`h-screen ${
-        isDarkMode
-          ? "bg-black text-white"
-          : "bg-white text-black"
+        isDarkMode ? "bg-black text-white" : "bg-white text-black"
       } ${isDarkMode ? "text-gray-100" : "text-gray-800"} font-sans`}
     >
       <Header
@@ -216,7 +214,7 @@ const UserPanel = () => {
                 isDarkMode ? "text-blue-100" : "text-white bg-transparent"
               } p-2 rounded-xl drop-shadow`}
             >
-             Search low prices on hotels, homes and much more...
+              Search low prices on hotels, homes and much more...
             </p>
 
             {/* Search Box */}
@@ -237,9 +235,11 @@ const UserPanel = () => {
       </section>
 
       {/* Main Content */}
-      <main className={`w-full mx-auto px-10   pb-16 ${
-        isDarkMode ? "bg-black text-white" : "bg-white text-black"
-      }`}>
+      <main
+        className={`w-full mx-auto px-10   pb-16 ${
+          isDarkMode ? "bg-black text-white" : "bg-white text-black"
+        }`}
+      >
         <SearchHotels
           states={states}
           cities={cities}
