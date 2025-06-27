@@ -25,7 +25,9 @@ const LogIn = () => {
 
     try {
       const res = await axios.post(`${baseURL}/user/login`, formData);
-      alert("Login successful!");
+      if(res.data.user){
+        alert("Login successful!");
+      }
       localStorage.clear();
       localStorage.setItem("isLogin", JSON.stringify(true));
       localStorage.setItem("role", res.data.user.role);

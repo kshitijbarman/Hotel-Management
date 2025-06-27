@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children, requiredRole }) => {
     }
 
     axios
-      .get("http://localhost:6969/user/me", {
+      .get("https://hotel-management-backend-rgpk.onrender.com/user/me", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -23,7 +23,9 @@ const ProtectedRoute = ({ children, requiredRole }) => {
         setIsAuthenticated(true);
 
         localStorage.setItem("userType", role);
-        console.log(`ProtectedRoute - Validated role: ${role}, Required: ${requiredRole}`);
+        console.log(
+          `ProtectedRoute - Validated role: ${role}, Required: ${requiredRole}`
+        );
       })
       .catch((error) => {
         console.error("ProtectedRoute - getMe error:", error);
@@ -32,6 +34,7 @@ const ProtectedRoute = ({ children, requiredRole }) => {
         localStorage.removeItem("isLogin");
         localStorage.removeItem("userType");
         setIsAuthenticated(false);
+        localStorage.clear();
       });
   }, []);
 
