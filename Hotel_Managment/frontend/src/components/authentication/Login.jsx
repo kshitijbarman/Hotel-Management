@@ -11,7 +11,6 @@ const LogIn = () => {
 
   const baseURL = "https://hotel-management-backend-rgpk.onrender.com";
 
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -25,12 +24,10 @@ const LogIn = () => {
     }
 
     try {
-      const res = await axios.post(
-        `${baseURL}/user/login`,
-        formData
-      );
+      const res = await axios.post(`${baseURL}/user/login`, formData);
       alert("Login successful!");
-      localStorage.setItem("isLogin", true);
+      localStorage.clear();
+      localStorage.setItem("isLogin", JSON.stringify(true));
       localStorage.setItem("role", res.data.user.role);
       localStorage.setItem("token", res.data.token);
 
